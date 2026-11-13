@@ -9,6 +9,43 @@ Promptlar **İngilizce** (görsel modeller ayrıntıyı İngilizcede daha tutarl
 
 ---
 
+## 0. Nasıl kullanılır (kısa)
+
+1. Aşağıdaki **indirme listesinden** orijinal fotoğrafı indirin (sitedeki kopyalar küçültüldü).
+2. ChatGPT'de **her fotoğraf için yeni bir sohbet** açın. Sadece o fotoğrafı yükleyin (tabelalı olanlarda `logo.png`'yi de).
+3. O fotoğrafın bölümündeki **Aşama A** promptunu yapıştırın. Sonucu kontrol listesiyle denetleyin.
+4. İyiyse A'nın **çıktısını** yeni mesajda yükleyip **Aşama B**'yi yapıştırın.
+5. Bitenleri aynı dosya adıyla `assets/img/` klasörüne koyun.
+6. Tüm görselleri veya bu dosyayı **tek seferde** yüklemeyin; model ayrıntıyı karıştırır.
+
+### Orijinal dosya indirme listesi
+Adres: `https://api.sbcboru.com/public/uploads/images/` + dosya adı
+
+| Dosya (site adı) | Orijinal |
+|---|---|
+| hero-tesis | [4117101053.jpg](https://api.sbcboru.com/public/uploads/images/4117101053.jpg) |
+| alt-yapi | [47152260.jpg](https://api.sbcboru.com/public/uploads/images/47152260.jpg) |
+| hdpe-rulo | [02276461.jpg](https://api.sbcboru.com/public/uploads/images/02276461.jpg) |
+| bina | [11537753.jpg](https://api.sbcboru.com/public/uploads/images/11537753.jpg) |
+| tabela | [101713124.jpg](https://api.sbcboru.com/public/uploads/images/101713124.jpg) |
+| pprc | [67445256.jpg](https://api.sbcboru.com/public/uploads/images/67445256.jpg) |
+| ust-yapi | [021102135.jpg](https://api.sbcboru.com/public/uploads/images/021102135.jpg) |
+| pvc | [45661375.jpg](https://api.sbcboru.com/public/uploads/images/45661375.jpg) |
+| temiz-su | [351016430.jpg](https://api.sbcboru.com/public/uploads/images/351016430.jpg) |
+| sessiz-boru | [201061575.jpg](https://api.sbcboru.com/public/uploads/images/201061575.jpg) |
+| suzgec | [5210166104.jpg](https://api.sbcboru.com/public/uploads/images/5210166104.jpg) |
+| ortu | [52143441.jpg](https://api.sbcboru.com/public/uploads/images/52143441.jpg) |
+| emici-verici | [32241505.jpg](https://api.sbcboru.com/public/uploads/images/32241505.jpg) |
+| galvaniz | [31631244.jpg](https://api.sbcboru.com/public/uploads/images/31631244.jpg) |
+| rogar | [04176115.jpg](https://api.sbcboru.com/public/uploads/images/04176115.jpg) |
+| tarimsal-sulama | [07762551.jpg](https://api.sbcboru.com/public/uploads/images/07762551.jpg) |
+| hdpe-boru | [56633321.jpg](https://api.sbcboru.com/public/uploads/images/56633321.jpg) |
+| bahce-peyzaj | [76565362.jpg](https://api.sbcboru.com/public/uploads/images/76565362.jpg) |
+| yagmurlama | [51774445.jpg](https://api.sbcboru.com/public/uploads/images/51774445.jpg) |
+| TIR (yeni) | sizdeki `FullSizeRender.jpeg` |
+
+---
+
 ## 1. Referans görsellerin "stil DNA'sı" (hedefimiz)
 
 Sacem görsellerinin inandırıcı olmasının nedenleri; promptlarda bunları tarif ediyoruz:
@@ -88,6 +125,7 @@ Site görsel ihtiyaçları ve mevcut fotoğrafların durumu. **Durum:** ✅ iyi 
 | **ALT YAPI** | Mavi PE rulolar | `alt-yapi.jpg` / `47152260.jpg` | 🟡 |
 | **RÖGAR KAPAK GRUBU** | Rögar kapakları (pastel arka plan kolajı) | `rogar.jpg` / `04176115.jpg` | 🔴 kolaj |
 | **SESİZ BORU GRUBU** | Bebek + mavi borular (sosyal medya postu) | `sessiz-boru.jpg` / `201061575.jpg` | 🔴 kullanılamaz |
+| Hizmetler → Lojistik ve Dağıtım, galeri | SBC BORU TIR'ı | `FullSizeRender.jpeg` (5.20) | 🟡 ağır filtre |
 | Siyah HDPE (İK, hizmetler, galeri) | Siyah rulolar | `hdpe-rulo.jpg` / `02276461.jpg` | 🟡 aşırı HDR |
 | Yönetim kurulu / ekip / sertifika / logolar / blog görselleri | — | **hiç yok** | 🔴 gerçek çekim şart |
 
@@ -374,6 +412,33 @@ Edit this exact portrait photo of pale-blue drainage pipes and fittings installe
 4) Upscale and rebuild fine detail; extend to 4:3 landscape by continuing the concrete ceiling and pipe runs naturally.
 Natural unretouched photograph look: sensor grain, no HDR halos, no oversaturation, no plastic over-smooth surfaces.
 ```
+
+---
+
+### 5.20 SBC BORU TIR'ı (yeni) — `FullSizeRender.jpeg` ~1320×1277
+**Slot:** Hizmetler → "Lojistik ve Dağıtım" kartı, galeri, Hizmetler sayfa başlığı. Çok değerli: markalı treyler gerçek ve net okunuyor.
+
+**Tespit:** Instagram filtresi gibi aşırı HDR/clarity, turuncu-camgöbeği renk tonu, sağdan gelen yapay lens flare ışınları. Zemin çatlak, kirli, çamurlu beton. Arkada bitmemiş inşaat binası (soldaki mavi boru güzel, kalsın). Plaka okunuyor. Çekici başlığında **üçüncü taraf yazılar** var ("Bradley", "BradleyTransport.com", "TUNÇTÜRK"): bu araç taşıyıcı firmanın çekicisi. Bunları kalsın mı kalkacak mı siz karar verin; promptta ikisi de var.
+
+**Aşama A — temizlik (görseli yükleyin)**
+```
+Edit this exact photo of a blue curtain-sider semi-trailer truck parked in front of an unfinished apartment building; do not regenerate. Keep the truck, the trailer livery, the camera angle and the building exactly. Do NOT redraw, reshape or re-letter anything on the trailer: the ring-and-swoosh logo, "SBC BORU", "KIBRIS" and "www.sbcboru.com" must stay exactly as they are, same size, color and position. Add no new text. Changes only:
+1) Remove the Instagram-style filter look: heavy HDR/clarity, orange-teal cast, crushed blacks; restore natural, true-to-life colors (the trailer stays its deep royal blue).
+2) Remove the lens flare rays and the glow across the right side.
+3) Ground: replace the cracked, dirty, muddy concrete with clean, even light-grey concrete with a subtle realistic fine texture, same perspective; remove the loose debris and rubble piles at the far left and right edges.
+4) Replace the license plate with a plain blank white plate.
+5) Make the vertical lines of the building perfectly vertical (slight perspective correction); keep the blue pipe on the building at the left.
+Natural unretouched photograph look: sensor grain, no HDR halos, no oversaturation, no plastic over-smooth surfaces.
+```
+**Aşama B — ışık (A'nın çıktısını yükleyin)**
+```
+Edit this exact photo; do not change any object, text or logo. Only the lighting and color grade. Use a single warm low sun from the right, about 90 minutes before sunset: soft warm highlights along the trailer's top edge and the cab roof, a gentle warm light on the concrete facade, a soft realistic shadow of the truck on the ground, a cool blue fill on the shadow side, natural reflections on the windshield. Moderate contrast, no orange cast, no glow, no lens flare, no HDR halo. Output 3:2 landscape by extending the ground and the building naturally on the left and right.
+```
+**İsteğe bağlı — çekici yazılarını nötrleştirmek isterseniz:**
+```
+Edit this exact photo; do not change the trailer. On the truck cab only, remove the third-party company lettering and web address ("Bradley", "BradleyTransport.com", "TUNÇTÜRK") and replace them with clean, plain surfaces matching the cab's existing white and dark-blue paint, keeping the cab's shape, reflections and the other graphics unchanged. Add no new text.
+```
+> Gerçek bir araçtan başka firmanın yazısını silmek yanlış bir izlenim yaratabilir; araç gerçekte o taşıyıcı firmaya aitse bu yazıları kalmış hâliyle kullanmak daha dürüst ve sorunsuzdur.
 
 ---
 
