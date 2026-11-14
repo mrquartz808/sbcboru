@@ -160,7 +160,7 @@ def footer():
 
 def page(slug, title, body, active='', hero=False, desc=''):
     out = f'''<!doctype html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
 <title>{html.escape(title)} — SBC Boru</title><meta name="description" content="{html.escape(desc or 'SBC Boru — Kuzey Kıbrıs’ın en büyük boru üreticisi ve tedarikçisi.')}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -172,7 +172,7 @@ def page(slug, title, body, active='', hero=False, desc=''):
 </main>
 {footer()}
 <script src="assets/js/site.js"></script></body></html>'''
-    with open(os.path.join(ROOT, slug), 'w', encoding='utf-8') as f:
+    with open(os.path.join(ROOT, 'docs', slug), 'w', encoding='utf-8') as f:
         f.write(out)
 
 def head(title, crumb, img='hero-tesis.jpg'):
