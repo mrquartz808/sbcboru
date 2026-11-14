@@ -213,7 +213,7 @@ def logo_ph(n, label='Logo'):
 
 # ------------------------------------------------------------------ SAYFALAR
 def home():
-    stats = [('target','99','%','','Proje Başarısı'),('users','60','','+','Çalışan'),('globe','200','','','Müşteri'),('clock','2004','','','Kuruluş'),('pipe','3000','','+','Ürün Çeşidi')]
+    stats = [('target','99','%','','Proje Başarısı'),('users','60','','+','Çalışan'),('globe','200','','','Dünya Çapında Müşteri'),('clock','2004','','','Kuruluş'),('pipe','3000','','+','Ürün Çeşidi')]
     st = ''.join(f'<div class="stat fu">{ic(i)}<div class="n" data-to="{n}" data-pre="{pre}" data-suf="{suf}">{pre}{n}{suf}</div><div class="l">{l}</div></div>' for i, n, pre, suf, l in stats)
     svcs = [('warehouse','Toptan Tedarik','Yapı market, hırdavat ve inşaat firmalarına geniş stoktan toptan boru ve tesisat tedariği.'),
             ('factory','Yerinde Üretim','Kendi üretim tesisimizde PVC, HDPE-LDPE, U-PVC ve PPRC ürünleri üretiyoruz.'),
@@ -259,7 +259,7 @@ def home():
     <div class="chips"><span class="chip">PVC atık su boruları</span><span class="chip">Siyah hortum (HDPE-LDPE)</span><span class="chip">Mandallı borular</span><span class="chip">U-PVC temiz su boruları</span><span class="chip">PPRC</span></div></div>
   <div class="ph fu"><img src="{IMG}hdpe-rulo.jpg" alt="HDPE boru rulolar" loading="lazy"></div></div></div></section>
 
-<section class="sec tint" style="overflow:hidden"><div class="wrap">{sec_head('Şirket İstatistikleri','Rakamlar kendi adına konuşuyor.','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve 200’ü aşkın müşteri.')}
+<section class="sec tint" style="overflow:hidden"><div class="wrap">{sec_head('Şirket İstatistikleri','Rakamlar kendi adına konuşuyor.','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve dünya genelinde 200’ü aşkın müşteri.')}
   <div class="stats"><div class="rings"></div>{st}</div></div></section>
 
 <section class="sec"><div class="wrap">{sec_head('Hizmetlerimiz','Ürünün ötesinde, çözüm ortağınız')}<div class="grid g3 keep1">{sv}</div>
@@ -303,9 +303,9 @@ def hakkimizda():
 <section class="sec dark" style="padding:0"><div class="blueprint"></div><div class="wrap"><div class="plant"><div class="tx fu"><span class="eyebrow">Yenilikçi Üretim Tesisi</span><h2>Yerli üretimi büyütüyoruz</h2>
 <p>Yeni kurduğumuz üretim tesisi, en son büyük adımımız. Burada PVC atık su boruları, siyah hortum (HDPE-LDPE), mandallı borular, U-PVC temiz su boruları ve PPRC boruları üretiyoruz. Yerli üretimi artırarak sektördeki gücümüzü büyütüyoruz.</p></div>
 <div class="ph fu"><img src="{IMG}hdpe-boru.jpg" alt="HDPE boru" loading="lazy"></div></div></div></section>
-<section class="sec tint"><div class="wrap">{sec_head('İstatistiksel Başarılar','Rakamlarla SBC Boru','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve 200’ü aşkın müşteri.')}
+<section class="sec tint"><div class="wrap">{sec_head('İstatistiksel Başarılar','Rakamlarla SBC Boru','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve dünya genelinde 200’ü aşkın müşteri.')}
 <div class="stats" style="grid-template-columns:repeat(3,1fr)">
-<div class="stat fu">{ic('target')}<div class="n" data-to="99" data-pre="%">%99</div><div class="l">Proje Başarısı</div></div><div class="stat fu">{ic('users')}<div class="n" data-to="60" data-suf="+">60+</div><div class="l">Çalışan</div></div><div class="stat fu">{ic('globe')}<div class="n" data-to="200">200</div><div class="l">Müşteri</div></div></div></div></section>
+<div class="stat fu">{ic('target')}<div class="n" data-to="99" data-pre="%">%99</div><div class="l">Proje Başarısı</div></div><div class="stat fu">{ic('users')}<div class="n" data-to="60" data-suf="+">60+</div><div class="l">Çalışan</div></div><div class="stat fu">{ic('globe')}<div class="n" data-to="200">200</div><div class="l">Dünya Çapında Müşteri</div></div></div></div></section>
 {contact_section()}'''
 
 def person(role, n=0):
