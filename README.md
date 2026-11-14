@@ -28,3 +28,9 @@ Doğrulanacak: personel sayısı (60+ / 70+), faaliyet alanı sayısı (üç / d
 Settings → Pages → Source: **Deploy from a branch** → Branch: `claude/new-session-ozifx1`, klasör: `/docs` → Save.
 Adres: `https://mrquartz808.github.io/sbcboru/` (her push'tan 1–2 dk sonra güncellenir). Site `noindex` ve `robots.txt` ile arama motorlarından gizlidir.
 İç belgeler (brief, görsel prompt rehberi) `internal/` klasöründedir ve Pages'te yayınlanmaz.
+
+## Scroll sürümü (scroll-craft)
+`docs/scroll/` altında, scroll-craft becerisiyle kurulmuş ikinci bir ana sayfa var: kapaktaki boru kesiti büyüyüp tesise geçiyor ("bore" imza hareketi).
+Kaynak: `scrollcraft/builds/sbc-boru/` (BRIEF.md, index.html, varlıklar), katman üretici: `scrollcraft/tools/make_layers.py`.
+Yayında: `https://mrquartz808.github.io/sbcboru/scroll/` · yerelde: `cd docs && python3 -m http.server 8000` → `http://localhost:8000/scroll/`
+Önizleme için kaynak klasöründe: `node <skill>/scripts/serve.mjs --root . --port 4500`.
