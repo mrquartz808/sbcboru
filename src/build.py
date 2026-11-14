@@ -143,7 +143,7 @@ def footer():
 <footer class="ftr"><div class="blueprint"></div><div class="wrap">
   <div class="ftr-g">
     <div><img class="fl" src="{IMG}logo-beyaz.png" alt="SBC Boru">
-      <p class="small" style="font-size:15px;line-height:24px">2004 yılında kurulmuş olup; üstyapı, altyapı tesisat boruları ve tarımsal sulama olmak üzere üç alanda faaliyet göstermektedir.</p>
+      <p class="small" style="font-size:15px;line-height:24px">2004’te kurulduk; üstyapı, altyapı tesisat boruları ve tarımsal sulama alanlarında hizmet veriyoruz.</p>
       <div class="soc"><a href="#" aria-label="X">{ic('x')}</a><a href="#" aria-label="Facebook">{ic('facebook')}</a><a href="#" aria-label="Instagram">{ic('instagram')}</a><a href="#" aria-label="YouTube">{ic('youtube')}</a></div></div>
     <div><h5>Kurumsal</h5><ul>{k}</ul></div>
     <div><h5>Ürünler</h5><ul style="columns:1">{u}</ul></div>
@@ -213,7 +213,7 @@ def logo_ph(n, label='Logo'):
 
 # ------------------------------------------------------------------ SAYFALAR
 def home():
-    stats = [('target','99','%','','Proje Başarısı'),('users','60','','+','Çalışan'),('globe','200','','','Dünya Çapında Müşteri'),('clock','2004','','','Kuruluş'),('pipe','3000','','+','Ürün Çeşidi')]
+    stats = [('target','99','%','','Proje Başarısı'),('users','60','','+','Çalışan'),('globe','200','','','Müşteri'),('clock','2004','','','Kuruluş'),('pipe','3000','','+','Ürün Çeşidi')]
     st = ''.join(f'<div class="stat fu">{ic(i)}<div class="n" data-to="{n}" data-pre="{pre}" data-suf="{suf}">{pre}{n}{suf}</div><div class="l">{l}</div></div>' for i, n, pre, suf, l in stats)
     svcs = [('warehouse','Toptan Tedarik','Yapı market, hırdavat ve inşaat firmalarına geniş stoktan toptan boru ve tesisat tedariği.'),
             ('factory','Yerinde Üretim','Kendi üretim tesisimizde PVC, HDPE-LDPE, U-PVC ve PPRC ürünleri üretiyoruz.'),
@@ -234,7 +234,7 @@ def home():
     return f'''
 <section class="hero"><div class="hero-bg" style="background-image:url({IMG}hero-tesis.jpg)"></div>
   <div class="wrap"><h1 class="fu">Suyun Aktığı Her Yerdeyiz…</h1>
-  <p class="lead fu">Ürettiğimiz ürünlerin uzun ömürlü olmasıyla övünen bir şirketiz.</p>
+  <p class="lead fu">Uzun ömürlü ürünler üretiyor, KKTC’nin dört bir yanına ulaştırıyoruz.</p>
   <div class="btns fu"><a class="btn btn-primary" href="urunler.html">Ürünleri İncele {ic('arrow')}</a><a class="btn btn-ghost" href="katalog.html">{ic('download')}Katalog İndir</a></div></div>
   {flow(grad='fw')}
   <div class="hero-strip"><div class="wrap"><ul>
@@ -245,8 +245,8 @@ def home():
 <section class="sec"><div class="blueprint"></div><div class="wrap"><div class="about">
   <div class="collage fu"><div class="rings"></div><img class="c1" src="{IMG}hero-tesis.jpg" alt="SBC Boru tesis" loading="lazy"><img class="c2" src="{IMG}bina.jpg" alt="SBC Boru ofis binası" loading="lazy"><img class="c3" src="{IMG}pvc.jpg" alt="Ürün istifi" loading="lazy"></div>
   <div class="fu"><span class="eyebrow">Hakkımızda</span><h2>Güvenilir altyapının üreticisi</h2>
-    <p style="margin-top:20px">SBC Boru, 2004 yılında kurulmuş bir şirket olarak, üstyapı, altyapı tesisat boruları, tarımsal sulama, bahçe peyzaj alanlarında faaliyet gösteren köklü bir şirkettir. Sektördeki deneyimi ve geniş ürün yelpazesi ile beraber, yapı marketleri, hırdavatçılar ve inşaat şirketleri gibi çeşitli müşteri gruplarına ürün tedarik etmekte ve bu alanda lider konumunu sürdürmektedir.</p>
-    <p>2015 yılında merkezini Gazimağusa’ya taşıyan SBC Boru, sahip olduğu satış ofisi, 1500 metrekarelik çalışma alanı ve 4500 metrekarelik depo kapasitesi ile toplamda 60’ı aşkın personeliyle Kuzey Kıbrıs Türk Cumhuriyeti genelinde kapsamlı hizmetler sunmaktadır.</p>
+    <p style="margin-top:20px">SBC Boru, 2004’te kuruldu. Üstyapı, altyapı tesisat boruları, tarımsal sulama ve bahçe peyzaj alanlarında faaliyet gösteren köklü bir firmayız. Yılların deneyimi ve geniş ürün yelpazemizle yapı marketlerine, hırdavatçılara ve inşaat şirketlerine ürün tedarik ediyor, sektördeki lider konumumuzu sürdürüyoruz.</p>
+    <p>2015’te merkezimizi Gazimağusa’ya taşıdık. Satış ofisimiz, 1.500 m² çalışma alanımız ve 4.500 m² depomuzla, 60’ı aşkın çalışanımızla KKTC genelinde hizmet veriyoruz.</p>
     <div class="pts"><div class="pt"><div class="ic-box">{ic('warehouse')}</div>Üstyapı</div><div class="pt"><div class="ic-box">{ic('elbow')}</div>Altyapı</div><div class="pt"><div class="ic-box">{ic('drip')}</div>Tarımsal sulama &amp; peyzaj</div></div>
     <a class="btn btn-primary" href="hakkimizda.html">Daha fazlası {ic('arrow')}</a></div></div></div></section>
 
@@ -254,12 +254,12 @@ def home():
   <p class="note">Not: “BAHÇE PEYZAJ” orijinal sitede iki kez yer alıyor; tasarımda da aynen bırakıldı.</p></div></section>
 
 <section class="sec dark" style="padding:0"><div class="blueprint"></div><div class="wrap"><div class="plant">
-  <div class="tx fu"><span class="eyebrow">Yeni üretim tesisi</span><h2>Yenilikçi üretim tesisi ile boru sektöründe atılım</h2>
-    <p>Gurur duyduğumuz en son başarı, yeni kurulan üretim tesisimizdir. Bu tesis sayesinde PVC atık su boruları, siyah hortum (HDPE-LDPE), mandallı borular, U-PVC temiz su boruları, PPRC gibi birçok ürünü üretmeye başladık. Bu atılım, yerli üretimi artırarak sektördeki etkimizi daha da güçlendirmemize yardımcı oldu.</p>
+  <div class="tx fu"><span class="eyebrow">Yeni üretim tesisi</span><h2>Yeni üretim tesisimizle yerli üretimi büyütüyoruz</h2>
+    <p>Yeni kurduğumuz üretim tesisi, en son büyük adımımız. Burada PVC atık su boruları, siyah hortum (HDPE-LDPE), mandallı borular, U-PVC temiz su boruları ve PPRC boruları üretiyoruz. Yerli üretimi artırarak sektördeki gücümüzü büyütüyoruz.</p>
     <div class="chips"><span class="chip">PVC atık su boruları</span><span class="chip">Siyah hortum (HDPE-LDPE)</span><span class="chip">Mandallı borular</span><span class="chip">U-PVC temiz su boruları</span><span class="chip">PPRC</span></div></div>
   <div class="ph fu"><img src="{IMG}hdpe-rulo.jpg" alt="HDPE boru rulolar" loading="lazy"></div></div></div></section>
 
-<section class="sec tint" style="overflow:hidden"><div class="wrap">{sec_head('Şirket İstatistikleri','Eserlerimizle gurur duyuyoruz.','Şirketimizin proje başarısı %99’dur ve 60’ın üzerinde uzman çalışanı ile dünya genelinde 200’ü aşkın müşteriye hizmet sunmaktadır.')}
+<section class="sec tint" style="overflow:hidden"><div class="wrap">{sec_head('Şirket İstatistikleri','Rakamlar kendi adına konuşuyor.','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve 200’ü aşkın müşteri.')}
   <div class="stats"><div class="rings"></div>{st}</div></div></section>
 
 <section class="sec"><div class="wrap">{sec_head('Hizmetlerimiz','Ürünün ötesinde, çözüm ortağınız')}<div class="grid g3 keep1">{sv}</div>
@@ -278,34 +278,34 @@ def home():
 <section class="sec"><div class="wrap"><div class="sec-row">{sec_head('Haberler & Blog','Son yazılar')}<a class="link-arrow" href="haberler.html">Tümünü gör {ic('arrow')}</a></div>
   <div class="grid g3 keep1">{po}</div></div></section>
 
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="cta fu">{flow(grad='fw')}<div><h3 style="font-size:36px;line-height:44px">Ekibimize katılın</h3><p>Geliştirmenin geleceğini şekillendirmeye yardımcı olmak için bizimle çalışın. Şu an 4 açık pozisyon var.</p></div>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="cta fu">{flow(grad='fw')}<div><h3 style="font-size:36px;line-height:44px">Ekibimize katılın</h3><p>Geleceği birlikte şekillendirelim. Şu an 4 açık pozisyonumuz var.</p></div>
   <a class="btn btn-white" href="insan-kaynaklari.html#basvuru">Şimdi Başvur {ic('arrow')}</a></div></div></section>
 
 {contact_section()}'''
 
 def hakkimizda():
-    tl = [('2004','İskele’de kuruluş','SBC Boru 2004 yılında kurulmuş olup ilk olarak İskele bölgesinde faaliyete geçmiştir.'),
+    tl = [('2004','İskele’de kuruluş','SBC Boru, 2004’te İskele bölgesinde faaliyete geçti.'),
           ('2015','Gazimağusa’ya taşınma','Merkez Gazimağusa Büyük Sanayi Bölgesi’ne taşındı: 1500 m² çalışma alanı ve 4500 m² depo.'),
           ('Bugün','Yeni üretim tesisi','PVC atık su, HDPE-LDPE, mandallı, U-PVC temiz su ve PPRC boruları kendi tesisimizde üretiliyor.')]
     t = ''.join(f'<div class="tl fu"><div class="yr">{y}</div><h4>{a_}</h4><p class="small" style="margin-top:6px">{b}</p></div>' for y, a_, b in tl)
     pr = [('pipe','PVC Boru ve Aksamları'),('drip','Damlama Borusu ve Aksamları'),('sprinkler','Peyzaj ve Otomatik Sulama'),('coupling','PPRC Boru ve Aksamları'),('filter','Gübre Tankları ve Filtreler'),('valve','Galvaniz Vana ve Aksamları')]
     p6 = ''.join(f'<div class="card card-pad fu" style="display:flex;gap:18px;align-items:center"><div class="ic-box">{ic(i)}</div><h4>{n}</h4></div>' for i, n in pr)
     return head('Hakkımızda','Hakkımızda','bina.jpg' if False else 'hero-tesis.jpg') + f'''
-<section class="sec"><div class="wrap"><div class="two-col"><div class="fu"><span class="eyebrow">Biz Kimiz?</span><h2>SBC Boru 2004 yılında kurulmuş olup ilk olarak İskele bölgesinde faaliyete geçmiştir.</h2></div>
-<div class="fu"><p>SBC Boru, 2004 yılında kurulmuş bir şirket olarak, üstyapı, altyapı tesisat boruları, tarımsal sulama, bahçe peyzaj alanlarında faaliyet gösteren köklü bir şirkettir. Sektördeki deneyimi ve geniş ürün yelpazesi ile beraber, yapı marketleri, hırdavatçılar ve inşaat şirketleri gibi çeşitli müşteri gruplarına ürün tedarik etmekte ve bu alanda lider konumunu sürdürmektedir.</p><br>
-<p>2015 yılında merkezini Gazimağusa’ya taşıyan SBC Boru, sahip olduğu satış ofisi, 1500 metrekarelik çalışma alanı ve 4500 metrekarelik depo kapasitesi ile toplamda 60’ı aşkın personeliyle Kuzey Kıbrıs Türk Cumhuriyeti genelinde kapsamlı hizmetler sunmaktadır.</p>
+<section class="sec"><div class="wrap"><div class="two-col"><div class="fu"><span class="eyebrow">Biz Kimiz?</span><h2>2004’te İskele’de başladık, bugün KKTC genelinde hizmet veriyoruz.</h2></div>
+<div class="fu"><p>SBC Boru, 2004’te kuruldu. Üstyapı, altyapı tesisat boruları, tarımsal sulama ve bahçe peyzaj alanlarında faaliyet gösteren köklü bir firmayız. Yılların deneyimi ve geniş ürün yelpazemizle yapı marketlerine, hırdavatçılara ve inşaat şirketlerine ürün tedarik ediyor, sektördeki lider konumumuzu sürdürüyoruz.</p><br>
+<p>2015’te merkezimizi Gazimağusa’ya taşıdık. Satış ofisimiz, 1.500 m² çalışma alanımız ve 4.500 m² depomuzla, 60’ı aşkın çalışanımızla KKTC genelinde hizmet veriyoruz.</p>
 <span class="note">Doğrulanacak: orijinal sitede Hakkımızda’da “70’i aşkın”, ana sayfada “60’ı aşkın” yazıyor; tasarımda 60+ kullanıldı.</span></div></div></div></section>
 <section class="sec tint"><div class="wrap">{sec_head('Yolculuğumuz','Zaman çizgisi')}<div class="timeline">{t}</div></div></section>
 <section class="sec"><div class="wrap"><div class="grid g2 keep1">
-<div class="card mv fu"><div class="ic-box">{ic('target')}</div><h3>Misyonumuz</h3><p style="margin-top:14px">Çevre dostu bir perspektifle su tesisatı ve tarımsal sulama alanında, üstyapı ve altyapı sektörlerinde de müşterilerimize güvenilir ve yüksek kaliteli hizmet sunarak onların ihtiyaçlarını karşılamak. Sürekli değişen piyasa dinamiklerini dikkate alarak ürün portföyümüzü sürekli olarak geliştirmek, teknolojik gelişmelere uyum sağlayarak büyümek ve yeni ulaşılabilir pazarlar oluşturarak SBC Boru’nun temel hedeflerini belirlemekteyiz.</p></div>
-<div class="card mv fu"><div class="ic-box">{ic('eye')}</div><h3>Vizyonumuz</h3><p style="margin-top:14px">İçe kapalı ekonomimize ekonomik kalkınma sağlayarak istihdamı artırmak, personelimizin yaşam standardını yükseltmek ve iş ortaklarımıza uygun fiyatlarla yüksek kalitede ürünler sunarak onları rekabetçi bir konuma getirmek.</p></div></div></div></section>
+<div class="card mv fu"><div class="ic-box">{ic('target')}</div><h3>Misyonumuz</h3><p style="margin-top:14px">Çevre dostu bir bakış açısıyla su tesisatı, tarımsal sulama, üstyapı ve altyapı alanlarında müşterilerimize güvenilir ve yüksek kaliteli hizmet sunmayı, ihtiyaçlarını karşılamayı hedefliyoruz. Değişen piyasa koşullarını izleyerek ürün portföyümüzü sürekli geliştiriyor, teknolojik gelişmelere uyum sağlayarak büyüyor ve yeni pazarlara açılıyoruz.</p></div>
+<div class="card mv fu"><div class="ic-box">{ic('eye')}</div><h3>Vizyonumuz</h3><p style="margin-top:14px">Ekonomik kalkınmaya katkı sağlayarak istihdamı artırmak, çalışanlarımızın yaşam standardını yükseltmek ve iş ortaklarımıza uygun fiyatla yüksek kaliteli ürünler sunarak onları rekabette güçlü kılmak.</p></div></div></div></section>
 <section class="sec tint"><div class="wrap">{sec_head('Ürün Çeşitliliği','3000’in üzerinde ürün çeşidi')}<div class="grid g3 keep1">{p6}</div></div></section>
-<section class="sec dark" style="padding:0"><div class="blueprint"></div><div class="wrap"><div class="plant"><div class="tx fu"><span class="eyebrow">Yenilikçi Üretim Tesisi</span><h2>Yerli üretimle sektörde atılım</h2>
-<p>Gurur duyduğumuz en son başarı, yeni kurulan üretim tesisimizdir. Bu tesis sayesinde PVC atık su boruları, siyah hortum (HDPE-LDPE), mandallı borular, U-PVC temiz su boruları, PPRC gibi birçok ürünü üretmeye başladık. Bu atılım, yerli üretimi artırarak sektördeki etkimizi daha da güçlendirmemize yardımcı oldu.</p></div>
+<section class="sec dark" style="padding:0"><div class="blueprint"></div><div class="wrap"><div class="plant"><div class="tx fu"><span class="eyebrow">Yenilikçi Üretim Tesisi</span><h2>Yerli üretimi büyütüyoruz</h2>
+<p>Yeni kurduğumuz üretim tesisi, en son büyük adımımız. Burada PVC atık su boruları, siyah hortum (HDPE-LDPE), mandallı borular, U-PVC temiz su boruları ve PPRC boruları üretiyoruz. Yerli üretimi artırarak sektördeki gücümüzü büyütüyoruz.</p></div>
 <div class="ph fu"><img src="{IMG}hdpe-boru.jpg" alt="HDPE boru" loading="lazy"></div></div></div></section>
-<section class="sec tint"><div class="wrap">{sec_head('İstatistiksel Başarılar','Rakamlarla SBC Boru','Şirketimizin proje başarısı %99’dur ve 60’ın üzerinde uzman çalışanı ile dünya genelinde 200’ü aşkın müşteriye hizmet sunmaktadır.')}
+<section class="sec tint"><div class="wrap">{sec_head('İstatistiksel Başarılar','Rakamlarla SBC Boru','%99 proje başarı oranı, 60’ı aşkın uzman çalışan ve 200’ü aşkın müşteri.')}
 <div class="stats" style="grid-template-columns:repeat(3,1fr)">
-<div class="stat fu">{ic('target')}<div class="n" data-to="99" data-pre="%">%99</div><div class="l">Proje Başarısı</div></div><div class="stat fu">{ic('users')}<div class="n" data-to="60" data-suf="+">60+</div><div class="l">Çalışan</div></div><div class="stat fu">{ic('globe')}<div class="n" data-to="200">200</div><div class="l">Dünya Çapında Müşteri</div></div></div></div></section>
+<div class="stat fu">{ic('target')}<div class="n" data-to="99" data-pre="%">%99</div><div class="l">Proje Başarısı</div></div><div class="stat fu">{ic('users')}<div class="n" data-to="60" data-suf="+">60+</div><div class="l">Çalışan</div></div><div class="stat fu">{ic('globe')}<div class="n" data-to="200">200</div><div class="l">Müşteri</div></div></div></div></section>
 {contact_section()}'''
 
 def person(role, n=0):
@@ -335,7 +335,7 @@ def markalar():
 def tanitim():
     return head('Bizi Tanıyın','Bizi Tanıyın','bina.jpg' if False else 'hero-tesis.jpg') + f'''
 <section class="sec"><div class="wrap"><div class="grid g2 keep1">
-<div class="card card-pad fu"><div class="ic-box" style="margin-bottom:20px">{ic('doc')}</div><h3>Bizi Tanıyın (Türkçe)</h3><p style="margin:14px 0 28px">Yüksek kaliteli, yenilikçi plastik çözümler üreten bir fabrika olarak hizmet veriyoruz. Olağanüstü ürünler ve hizmetlerimizle tanışın.</p>
+<div class="card card-pad fu"><div class="ic-box" style="margin-bottom:20px">{ic('doc')}</div><h3>Bizi Tanıyın (Türkçe)</h3><p style="margin:14px 0 28px">Yüksek kaliteli, yenilikçi plastik çözümler üreten bir fabrikayız. Ürünlerimizle ve hizmetlerimizle tanışın.</p>
 <div class="cat-cover" style="aspect-ratio:16/10;max-width:none;margin-bottom:28px"><img src="{IMG}logo-beyaz.png" alt=""><h3 style="font-size:28px;line-height:34px">Şirket Sunumu — TR<br><small style="font-size:14px;font-weight:600;opacity:.8">PDF kapağı yer tutucu</small></h3></div>
 <button class="btn btn-primary" data-modal="viewer">Sunumu Görüntüle {ic('arrow')}</button></div>
 <div class="card card-pad fu"><div class="ic-box" style="margin-bottom:20px">{ic('globe')}</div><h3>Bizi Tanıyın (English)</h3><p style="margin:14px 0 28px">We specialize in creating high-quality, innovative plastic solutions tailored to your needs. Experience exceptional products and service with us.</p>
@@ -401,7 +401,7 @@ def referanslar():
 def belgeler():
     cs = ''.join(f'<button class="cert fu" style="cursor:pointer" data-modal="certm" data-title="Belge adı {i}">{ic("badge")}Belge adı {i}<br><span style="font-weight:600">Yıl — yer tutucu</span></button>' for i in range(1,9))
     return head('Belgelerimiz','Belgelerimiz','pvc.jpg' if False else 'alt-yapi.jpg') + f'''
-<section class="sec"><div class="wrap"><div class="sec-head fu"><span class="eyebrow">Belgelerimiz</span><h2>Kalite anlayışımızın kanıtı</h2><p>SBC BORU olarak, üstün kalite anlayışımızı ve müşteri memnuniyetini her zaman ön planda tutuyoruz. Aşağıda, sahip olduğumuz kalite belgelerini inceleyerek ürün ve hizmetlerimizin yüksek standartlarda olduğunu görebilirsiniz.</p></div>
+<section class="sec"><div class="wrap"><div class="sec-head fu"><span class="eyebrow">Belgelerimiz</span><h2>Kalite anlayışımızın kanıtı</h2><p>SBC Boru olarak kaliteyi ve müşteri memnuniyetini her zaman ön planda tutuyoruz. Sahip olduğumuz kalite belgelerini aşağıda inceleyebilirsiniz.</p></div>
 <div class="grid g4" style="grid-template-columns:repeat(4,1fr)">{cs}</div><p class="note">Gerçek belge adları ve yılları eklenecek; uydurma belge yazılmadı.</p></div></section>
 <div class="modal" id="certm"><div class="box" style="max-width:480px"><button class="x-btn x" aria-label="Kapat">{ic('close','sm')}</button><h4 data-mt style="margin-bottom:16px">Belge</h4><div class="cert" style="aspect-ratio:3/4">{ic('doc')}A4 önizleme — eklenecek</div></div></div>'''
 
@@ -412,8 +412,8 @@ def ik():
     ev = ''.join(f'<div class="card ev fu"><div class="date">{d}</div><h4>{t}</h4></div>' for d, t in [('3 Şubat 2023','Depo & Stok Yönetimi Eğitimi'),('23–26 Kasım 2022','Growtech Fuarı')])
     act = ''.join(f'<div class="cert" style="aspect-ratio:4/3">Aktivite fotoğrafı<br>eklenecek</div>' for _ in range(4))
     return head('İnsan Kaynakları','İnsan Kaynakları','hero-tesis.jpg') + f'''
-<section class="sec"><div class="wrap"><div class="two-col"><div class="fu"><span class="eyebrow">İ.K</span><h2>Geliştirmenin geleceğini şekillendirmeye yardımcı olmak için ekibimize katılın.</h2></div>
-<div class="fu"><h4 style="margin-bottom:10px">SBC’li Olmak</h4><p>Mağusa’da Büyük Sanayi Bölgesinde bulunan 3000’in üzerinde ürün çeşidi ile yapı marketlere, hırdavatçılara ve inşaat şirketlerine ürün tedarik eden firmamızda en değerli sermayesi insan kaynakları olarak kabul etmektedir. Bu nedenle de, çalışma arkadaşlarımıza, mutlu olacakları, mesleki ve insani açılardan kendilerini geliştirebilecekleri bir çalışma ortamı sunmayı birinci hedefimiz olarak görüyoruz.</p>
+<section class="sec"><div class="wrap"><div class="two-col"><div class="fu"><span class="eyebrow">İ.K</span><h2>Geleceği birlikte şekillendirmek için ekibimize katılın.</h2></div>
+<div class="fu"><h4 style="margin-bottom:10px">SBC’li Olmak</h4><p>Gazimağusa Büyük Sanayi Bölgesi’ndeki firmamız, 3.000’den fazla ürün çeşidiyle yapı marketlerine, hırdavatçılara ve inşaat şirketlerine ürün tedarik ediyor. En değerli sermayemiz insan kaynağımız; bu yüzden çalışma arkadaşlarımıza mutlu olacakları, mesleki ve kişisel olarak gelişebilecekleri bir ortam sunmayı birinci hedefimiz olarak görüyoruz.</p>
 <span class="note">Doğrulanacak: İK sayfasında “dört alan”, diğer yerlerde “üç alan” yazıyor; tasarımda üç alan kullanıldı.</span></div></div></div></section>
 <section class="sec tint"><div class="wrap">{sec_head('İş Başvurusu','Kimler başvurabilir?')}<div class="grid g2 keep1" style="grid-template-columns:repeat(4,1fr)">{aud}</div>
 <h3 style="margin:56px 0 20px">Açık pozisyonlar</h3><ul class="jobs">{jobs}</ul></div></section>
@@ -483,7 +483,7 @@ def stil():
             ('Çizgi','#E3E8F0','Kenarlık'),('Footer','#21262C','Footer / koyu bant'),('Başarı','#198754','Form'),('Hata','#DC3545','Form')]
     sw = ''.join(f'<div><i style="background:{h}"></i><span>{n}<small>{h} · {u}</small></span></div>' for n, h, u in cols)
     ics = ''.join(f'<div>{ic(k)}{k}</div>' for k in ICONS)
-    ty = [('H1 64/72 · 700','h1','Suyun Aktığı Her Yerdeyiz'),('H2 44/52 · 700','h2','Güvenilir altyapının üreticisi'),('H3 28/36 · 700','h3','Yenilikçi üretim tesisi'),('H4 20/28 · 700','h4','Ürün grupları'),('Gövde 17/28 · 400','p','Ürettiğimiz ürünlerin uzun ömürlü olmasıyla övünen bir şirketiz.'),('Etiket 13/16 · 700','e','Ürün Grupları')]
+    ty = [('H1 64/72 · 700','h1','Suyun Aktığı Her Yerdeyiz'),('H2 44/52 · 700','h2','Güvenilir altyapının üreticisi'),('H3 28/36 · 700','h3','Yenilikçi üretim tesisi'),('H4 20/28 · 700','h4','Ürün grupları'),('Gövde 17/28 · 400','p','Uzun ömürlü ürünler üretiyor, KKTC’nin dört bir yanına ulaştırıyoruz.'),('Etiket 13/16 · 700','e','Ürün Grupları')]
     tr = ''.join(f'<div class="type-row"><code>{l}</code><{"span class=eyebrow style=margin:0" if t=="e" else t}>{x}</{"span" if t=="e" else t}></div>' for l, t, x in ty)
     return head('Stil Kılavuzu','Stil Kılavuzu','hero-tesis.jpg') + f'''
 <section class="sec"><div class="wrap">{sec_head('Renkler','Renk sistemi','Yalnızca mavi + koyu lacivert-gri + beyaz. Gradient: hero fotoğraf overlay’i ve CTA bandı.')}<div class="sw">{sw}</div></div></section>
